@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <%= stylesheet_link_tag 'adminlte/dist/css/adminlte', media: 'all' %>
+    <%= javascript_include_tag "adminlte/dist/js/adminlte", media: "all" %>
+  </head>
+
+  <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
+  <div class = "warapper">
+    <%= render "base/header" %>
+    <%= render "base/sidebar" %>
+    <div class = "content-wrapper">
+      <div class = "content-header">
+        <div class = container-fluid>
+          <div class = "row mb-2">
+            <div class = "col-sm-6">
+              <h1 class = "m-0 text-dark">Starter Pages</h1>
+            </div>
+            <div class = "col-md-6">
+              <ol class = "breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Starter Page</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "content container-fluid">
+        <div class = "container-fluid">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <%= render "base/footer" %>
+    <%= render "base/control_sidebar" %>
+  </div>
+  </body>
+</html>
