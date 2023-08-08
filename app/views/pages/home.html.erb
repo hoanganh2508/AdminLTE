@@ -1,2 +1,54 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class = "warapper">
+  <%= render "base/header" %>
+  <%= render "base/sidebar" %>
+  <div class = "content-wrapper">
+    <div class = "content-header">
+      <div class = container-fluid>
+        <div class = "row mb-2">
+          <div class = "col-sm-6">
+            <div class="container mt-5">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      Báo Cáo Vấn Đề
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Tên</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="issue" class="form-label">Vấn Đề</label>
+                          <textarea class="form-control" id="issue" name="issue" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gửi Báo Cáo</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class = "col-md-6">
+            <ol class = "breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "content container-fluid">
+      <div class = "container-fluid">
+      </div>
+    </div>
+  </div>
+  <%= render "base/footer" %>
+  <%= render "base/control_sidebar" %>
+</div>
